@@ -55,7 +55,7 @@ micentavito/
     └── contacto.html    # Formulario de contacto
 ```
 
-## � Instalación y Uso
+## 🚀 Instalación y Uso
 
 1. Clona este repositorio:
 
@@ -76,7 +76,7 @@ El sistema incluye un usuario de demostración:
 | Email      | `juan@mail.com` |
 | Contraseña | `juan123`       |
 
-## � Vista Previa
+## 📸 Vista Previa
 
 El proyecto incluye:
 
@@ -96,7 +96,7 @@ Estudiante de la carrera de **Desarrollo de Software**
 
 [![GitHub](https://img.shields.io/badge/GitHub-damorenom-181717?style=flat&logo=github)](https://github.com/damorenom)
 
-## � Contexto Académico
+## 📚 Contexto Académico
 
 Este proyecto fue desarrollado como parte de la materia de **Programación Web**, dictada por el **Ing. Galo Cepeda, MSc.** durante el periodo académico **2025-II**.
 
