@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Cuentas | MiCentavito</title>
+    <meta name="description" content="Conoce nuestras cuentas de ahorro y corriente. Abre tu cuenta hoy y empieza a hacer crecer tu dinero." />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body class="container-full-height">
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <i class="fas fa-coins me-2"></i>MiCentavito
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Productos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cuentas.html"><i class="fas fa-piggy-bank me-2"></i>Cuentas</a></li>
+                  <li><a class="dropdown-item" href="tarjetas.html"><i class="fas fa-credit-card me-2"></i>Tarjetas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sucursales.html">Sucursales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <div id="userNavArea">
+              <a href="login.html" class="btn btn-outline-light btn-sm"><i class="fas fa-user me-1"></i> Banca en Línea</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <!-- Hero de cuentas -->
+      <section class="hero-section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <h1>Cuentas que crecen contigo</h1>
+              <p class="lead">
+                Elige la cuenta que mejor se adapte a tus necesidades. 
+                Sin comisiones ocultas y con beneficios exclusivos para ti.
+              </p>
+              <a href="registro.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-user-plus me-2"></i>Abrir Cuenta
+              </a>
+            </div>
+            <div class="col-lg-6">
+              <img src="../images/cuentas-banner.png" alt="Cuentas bancarias" class="img-fluid rounded shadow" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tipos de cuentas -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="section-title">
+            <h2>Nuestros Tipos de Cuenta</h2>
+            <p>Encuentra la opción perfecta para administrar tu dinero</p>
+          </div>
+          <div class="row g-4">
+            <!-- Cuenta de Ahorro -->
+            <article class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="icon-wrapper me-3" style="width: 60px; height: 60px; background: var(--color-fondo); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                      <i class="fas fa-piggy-bank fa-2x" style="color: var(--color-primario);"></i>
+                    </div>
+                    <h3 class="h4 mb-0">Cuenta de Ahorro</h3>
+                  </div>
+                  <p>Ideal para guardar tu dinero y verlo crecer. Gana intereses mensuales mientras mantienes tus fondos seguros y disponibles.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sin monto mínimo de apertura</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tasa de interés del 4% anual</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tarjeta de débito gratuita</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Acceso a banca virtual</li>
+                  </ul>
+                  <a href="registro.html" class="btn btn-primary">Abrir Cuenta de Ahorro</a>
+                </div>
+              </div>
+            </article>
+            <!-- Cuenta Corriente -->
+            <article class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="icon-wrapper me-3" style="width: 60px; height: 60px; background: var(--color-fondo); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                      <i class="fas fa-money-check-alt fa-2x" style="color: var(--color-secundario);"></i>
+                    </div>
+                    <h3 class="h4 mb-0">Cuenta Corriente</h3>
+                  </div>
+                  <p>Perfecta para el manejo diario de tu negocio o finanzas personales. Realiza pagos y transacciones sin límites.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Chequera disponible</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Transferencias ilimitadas</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sobregiro opcional</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Estado de cuenta mensual</li>
+                  </ul>
+                  <a href="registro.html" class="btn btn-secondary">Abrir Cuenta Corriente</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Requisitos -->
+      <section class="py-5">
+        <div class="container">
+          <div class="section-title">
+            <h2>Requisitos para Abrir tu Cuenta</h2>
+            <p>Es muy fácil, solo necesitas:</p>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="row g-4 text-center">
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <i class="fas fa-id-card fa-3x" style="color: var(--color-primario);"></i>
+                  </div>
+                  <h5>Cédula de Identidad</h5>
+                  <p class="small">Original y copia de tu documento</p>
+                </div>
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <i class="fas fa-file-invoice fa-3x" style="color: var(--color-primario);"></i>
+                  </div>
+                  <h5>Planilla de Servicio</h5>
+                  <p class="small">Luz, agua o teléfono reciente</p>
+                </div>
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <i class="fas fa-dollar-sign fa-3x" style="color: var(--color-primario);"></i>
+                  </div>
+                  <h5>Depósito Inicial</h5>
+                  <p class="small">Desde $10 para empezar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5><i class="fas fa-coins me-2"></i>MiCentavito</h5>
+            <p class="mb-3">Tu banco de confianza, siempre a tu lado.</p>
+            <div class="social-links">
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Facebook.');"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en X/Twitter.');"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Instagram.');"><i class="fab fa-instagram"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en LinkedIn.');"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="cuentas.html">Cuentas</a></li>
+              <li><a href="tarjetas.html">Tarjetas</a></li>
+              <li><a href="sucursales.html">Sucursales</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>1800-236-8286 (CENTAVO)</li>
+              <li><i class="fas fa-envelope me-2"></i>info@micentavito.com</li>
+              <li><i class="fas fa-map-marker-alt me-2"></i>Quito, Ecuador</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
+          <p class="mb-0">2025 MiCentavito Template. Desarrollado por Diego Moreno <a href="https://github.com/damorenom" target="_blank" class="ms-2"><i class="fab fa-github"></i></a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

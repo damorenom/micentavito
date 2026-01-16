@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Crear Cuenta | MiCentavito</title>
+    <meta name="description" content="Abre tu cuenta en MiCentavito en minutos. Disfruta de banca en línea, tarjetas y más beneficios." />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body class="container-full-height">
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <i class="fas fa-coins me-2"></i>MiCentavito
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Productos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cuentas.html"><i class="fas fa-piggy-bank me-2"></i>Cuentas</a></li>
+                  <li><a class="dropdown-item" href="tarjetas.html"><i class="fas fa-credit-card me-2"></i>Tarjetas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sucursales.html">Sucursales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <section class="auth-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+              <div class="card auth-card">
+                <div class="card-body p-4 p-md-5">
+                  <!-- Header del formulario -->
+                  <div class="auth-header">
+                    <i class="fas fa-user-plus"></i>
+                    <h1 class="h3">Crear Cuenta</h1>
+                    <p class="text-muted">Únete a MiCentavito en minutos</p>
+                  </div>
+
+                  <!-- Formulario de registro -->
+                  <form onsubmit="event.preventDefault(); registrarUsuario();">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre completo</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Correo electrónico</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Contraseña</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" id="password" placeholder="Mínimo 6 caracteres" required />
+                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('password')">
+                          <i class="fas fa-eye" id="password-icon"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Repite tu contraseña" required />
+                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('confirmPassword')">
+                          <i class="fas fa-eye" id="confirmPassword-icon"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="form-check mb-4">
+                      <input class="form-check-input" type="checkbox" id="terminos" required />
+                      <label class="form-check-label" for="terminos">
+                        Acepto los <a href="#">términos y condiciones</a>
+                      </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mb-3">
+                      <i class="fas fa-user-plus me-2"></i>Crear Cuenta
+                    </button>
+                  </form>
+
+                  <!-- Contenedor de alertas -->
+                  <div id="registerAlertContainer"></div>
+
+                  <!-- Link a login -->
+                  <div class="text-center mt-4">
+                    <p class="mb-0">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="text-center mb-3">
+          <p class="fst-italic mb-0" style="color: rgba(255,255,255,0.7);" id="fraseMotivacional"></p>
+        </div>
+        <div class="footer-bottom text-center">
+          <p class="mb-0">2025 MiCentavito Template. Desarrollado por Diego Moreno <a href="https://github.com/damorenom" target="_blank" class="ms-2"><i class="fab fa-github"></i></a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

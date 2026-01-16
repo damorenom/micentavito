@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Mi Banca | MiCentavito</title>
+    <meta name="description" content="Panel de banca virtual MiCentavito. Consulta tus saldos, realiza transferencias y más." />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body class="container-full-height">
+    <!-- Header del Dashboard -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <i class="fas fa-coins me-2"></i>MiCentavito
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="dashboard.html">Mi Banca</a>
+              </li>
+            </ul>
+            <div>
+              <button class="btn btn-outline-light btn-sm" onclick="cerrarSesion()">
+                <i class="fas fa-sign-out-alt me-1"></i> Cerrar Sesión
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <!-- Header del dashboard -->
+      <section class="dashboard-header">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h1 class="h3 mb-1">Bienvenido, <span id="nombreUsuario">Usuario</span></h1>
+              <p class="mb-0" style="color: rgba(255,255,255,0.85);">Panel de Banca Virtual</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contenido del dashboard -->
+      <section class="py-4">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Tarjeta de saldo -->
+            <div class="col-lg-4">
+              <div class="card balance-card">
+                <div class="card-body">
+                  <p class="balance-label mb-1">Saldo Disponible</p>
+                  <h2 class="balance-amount" id="saldoUsuario">$0.00</h2>
+                  <p class="mb-0 mt-3 small" style="color: rgba(255,255,255,0.85);">
+                    <i class="fas fa-credit-card me-2"></i>Cuenta: <span id="numeroCuenta">----</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Acciones rápidas -->
+            <div class="col-lg-8">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5 mb-4">Acciones Rápidas</h3>
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="quick-action card" onclick="funcionNoDisponible()">
+                        <div class="icon-wrapper">
+                          <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <span>Transferir</span>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="quick-action card" onclick="funcionNoDisponible()">
+                        <div class="icon-wrapper">
+                          <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <span>Pagar</span>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="quick-action card" onclick="funcionNoDisponible()">
+                        <div class="icon-wrapper">
+                          <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <span>Recargar</span>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="quick-action card" onclick="funcionNoDisponible()">
+                        <div class="icon-wrapper">
+                          <i class="fas fa-history"></i>
+                        </div>
+                        <span>Historial</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Últimos movimientos -->
+          <div class="row mt-4">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="h5 mb-0">Últimos Movimientos</h3>
+                    <a href="#" class="small" onclick="event.preventDefault(); funcionNoDisponible();">Ver todos</a>
+                  </div>
+
+                  <!-- Lista de movimientos (dinámica según el usuario) -->
+                  <div id="listaMovimientos">
+                    <!-- Se llena con JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Productos del usuario -->
+          <div class="row mt-4 g-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5 mb-3"><i class="fas fa-piggy-bank me-2" style="color: var(--color-primario);"></i>Mi Cuenta de Ahorro</h3>
+                  <p class="text-muted mb-2">Cuenta activa desde 2024</p>
+                  <ul class="list-unstyled small">
+                    <li><i class="fas fa-check text-success me-2"></i>Tasa de interés: 4% anual</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Sin costos de mantenimiento</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5 mb-3"><i class="fas fa-credit-card me-2" style="color: var(--color-secundario);"></i>Mi Tarjeta de Débito</h3>
+                  <p class="text-muted mb-2">Visa **** 5678</p>
+                  <ul class="list-unstyled small">
+                    <li><i class="fas fa-check text-success me-2"></i>Compras nacionales e internacionales</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Retiros en cajeros</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5><i class="fas fa-coins me-2"></i>MiCentavito</h5>
+            <p class="mb-3">Tu banco de confianza, siempre a tu lado.</p>
+            <div class="social-links">
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Facebook.');"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en X/Twitter.');"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Instagram.');"><i class="fab fa-instagram"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en LinkedIn.');"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="cuentas.html">Cuentas</a></li>
+              <li><a href="tarjetas.html">Tarjetas</a></li>
+              <li><a href="sucursales.html">Sucursales</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>1800-236-8286 (CENTAVO)</li>
+              <li><i class="fas fa-envelope me-2"></i>info@micentavito.com</li>
+              <li><i class="fas fa-map-marker-alt me-2"></i>Quito, Ecuador</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
+          <p class="mb-0">2025 MiCentavito Template. Desarrollado por Diego Moreno <a href="https://github.com/damorenom" target="_blank" class="ms-2"><i class="fab fa-github"></i></a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+    
+    <!-- Cargar datos del dashboard -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        cargarDashboard();
+      });
+    </script>
+  </body>
+</html>

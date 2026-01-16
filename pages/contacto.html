@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Contacto | MiCentavito</title>
+    <meta name="description" content="¿Tienes dudas? Contáctanos. Estamos aquí para ayudarte con cualquier consulta sobre nuestros servicios." />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body class="container-full-height">
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <i class="fas fa-coins me-2"></i>MiCentavito
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Productos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cuentas.html"><i class="fas fa-piggy-bank me-2"></i>Cuentas</a></li>
+                  <li><a class="dropdown-item" href="tarjetas.html"><i class="fas fa-credit-card me-2"></i>Tarjetas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sucursales.html">Sucursales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <div id="userNavArea">
+              <a href="login.html" class="btn btn-outline-light btn-sm"><i class="fas fa-user me-1"></i> Banca en Línea</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <section class="py-5">
+        <div class="container">
+          <div class="section-title">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte con cualquier consulta</p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Información de contacto -->
+            <div class="col-lg-5">
+              <div class="mb-4">
+                <h3 class="h5 mb-3">Información de Contacto</h3>
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i class="fas fa-phone me-3" style="color: var(--color-primario);"></i>
+                    <strong>Línea gratuita:</strong> 1800-236-8286 (CENTAVO)
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-envelope me-3" style="color: var(--color-primario);"></i>
+                    <strong>Email:</strong> info@micentavito.com
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-map-marker-alt me-3" style="color: var(--color-primario);"></i>
+                    <strong>Oficina principal:</strong> Av. 10 de Agosto N21-50, Quito
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-clock me-3" style="color: var(--color-primario);"></i>
+                    <strong>Horario:</strong> Lun - Vie: 8:00 - 18:00
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="h5 mb-3">Síguenos</h3>
+                <div class="social-links-light">
+                  <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Facebook.');"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en X/Twitter.');"><i class="fab fa-x-twitter"></i></a>
+                  <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Instagram.');"><i class="fab fa-instagram"></i></a>
+                  <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en LinkedIn.');"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="col-lg-7">
+              <div class="card contact-form">
+                <div class="card-body">
+                  <h3 class="h5 mb-4">Envíanos un mensaje</h3>
+                  <form onsubmit="event.preventDefault(); enviarFormulario();">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre completo *</label>
+                        <input type="text" class="form-control" id="nombre" required />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="email" class="form-label">Correo electrónico *</label>
+                        <input type="email" class="form-control" id="email" required />
+                      </div>
+                      <div class="col-12">
+                        <label for="asunto" class="form-label">Asunto</label>
+                        <select class="form-select" id="asunto">
+                          <option value="" disabled selected>Selecciona un tema</option>
+                          <option value="cuentas">Consulta sobre cuentas</option>
+                          <option value="tarjetas">Consulta sobre tarjetas</option>
+                          <option value="banca">Banca en línea</option>
+                          <option value="reclamo">Reclamo</option>
+                          <option value="otro">Otro</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje *</label>
+                        <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">
+                          <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- Contenedor para alertas del formulario -->
+                  <div id="formAlertContainer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Preguntas frecuentes -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="section-title">
+            <h2>Preguntas Frecuentes</h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                      ¿Cómo puedo abrir una cuenta?
+                    </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Puedes abrir tu cuenta en línea desde nuestra página web o visitando cualquiera de nuestras sucursales. Solo necesitas tu cédula de identidad, una planilla de servicio básico y un depósito inicial desde $10.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                      ¿Cuáles son los horarios de atención?
+                    </button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Nuestras sucursales atienden de lunes a viernes de 8:30 a 17:00. Las agencias en centros comerciales tienen horario extendido. La banca virtual está disponible las 24 horas del día.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                      ¿Cómo recupero mi contraseña de banca en línea?
+                    </button>
+                  </h2>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      En la página de inicio de sesión, haz clic en "¿Olvidaste tu contraseña?" y sigue las instrucciones. Te enviaremos un enlace a tu correo electrónico registrado para restablecer tu contraseña.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5><i class="fas fa-coins me-2"></i>MiCentavito</h5>
+            <p class="mb-3">Tu banco de confianza, siempre a tu lado.</p>
+            <div class="social-links">
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Facebook.');"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en X/Twitter.');"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en Instagram.');"><i class="fab fa-instagram"></i></a>
+              <a href="#" onclick="event.preventDefault(); mostrarAlerta('info', 'Síguenos en LinkedIn.');"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="cuentas.html">Cuentas</a></li>
+              <li><a href="tarjetas.html">Tarjetas</a></li>
+              <li><a href="sucursales.html">Sucursales</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>1800-236-8286 (CENTAVO)</li>
+              <li><i class="fas fa-envelope me-2"></i>info@micentavito.com</li>
+              <li><i class="fas fa-map-marker-alt me-2"></i>Quito, Ecuador</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
+          <p class="mb-0">2025 MiCentavito Template. Desarrollado por Diego Moreno <a href="https://github.com/damorenom" target="_blank" class="ms-2"><i class="fab fa-github"></i></a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
